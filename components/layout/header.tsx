@@ -78,7 +78,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Angkasa Laut Logistics</span>
+            <span className="sr-only">Angkasa Laut Logisticss</span>
             <div className="flex items-center">
               <span
                 className={cn(
