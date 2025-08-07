@@ -145,10 +145,10 @@ export default function Header() {
         <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Angkaasa Laut Logistics</span>
+              <span className="sr-only">angkasa laut compro</span>
               <div className="flex items-center">
                 <span className="text-lg font-bold text-blue-700 dark:text-blue-400">
-                  Angkaasa Laut Logistics
+                  angkasa laut compro
                 </span>
               </div>
             </Link>
