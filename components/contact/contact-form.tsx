@@ -100,8 +100,8 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="rounded-lg border border-border bg-white p-6 shadow-sm dark:bg-gray-950">
-      <h2 className="mb-6 text-2xl font-bold">Send Us a Message</h2>
+    <div className="rounded-lg border border-cobalt bg-white p-6 text-cobalt dark:bg-gray-950">
+      <h2 className="mb-6 text-2xl font-bold text-cobalt">Send Us a Message</h2>
 
       <Form {...form}>
         <form
@@ -115,7 +115,12 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Full Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input
+                    color="indigo"
+                    className=""
+                    placeholder="John Doe"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -197,7 +202,7 @@ export default function ContactForm() {
 
           <Button
             type="submit"
-            className="w-full dark:bg-gray-800 dark:text-gray-200"
+            className="w-full bg-cobalt text-white dark:bg-gray-800 dark:text-gray-200"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Sending..." : "Send Message"}
