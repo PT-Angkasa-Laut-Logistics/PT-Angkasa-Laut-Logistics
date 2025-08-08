@@ -57,8 +57,8 @@ export default function Header() {
       return cn(
         "text-sm font-semibold transition-colors",
         href === "/"
-          ? "text-blue-700 dark:text-blue-400"
-          : "text-gray-900 hover:text-blue-700 dark:text-gray-600 dark:hover:text-blue-400",
+          ? "text-cobalt dark:text-blue-400"
+          : "text-gray-900 hover:text-cobalt dark:text-gray-600 dark:hover:text-blue-400",
       );
     }
 
@@ -73,10 +73,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-white shadow-sm dark:bg-gray-900"
-          : "bg-white/80 backdrop-blur-sm",
+        "fixed inset-x-0 top-0 z-50 bg-white shadow-sm transition-all duration-300 dark:bg-gray-900",
       )}
     >
       <nav
@@ -93,7 +90,7 @@ export default function Header() {
                   scrolled
                     ? "text-white"
                     : isHome
-                      ? "text-blue-700 dark:text-blue-400"
+                      ? "text-cobalt dark:text-blue-400"
                       : "text-white",
                 )}
               >
@@ -164,7 +161,7 @@ export default function Header() {
       <div
         className={cn(
           "lg:hidden",
-          mobileMenuOpen ? "fixed inset-0 z-50" : "hidden",
+          mobileMenuOpen ? "fixed inset-0 z-[9999]" : "hidden",
         )}
       >
         <div className="fixed inset-0 bg-gray-900/80" />
@@ -202,7 +199,7 @@ export default function Header() {
                   className={cn(
                     "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7",
                     pathname === "/"
-                      ? "bg-gray-50 text-blue-700 dark:bg-slate-800 dark:text-blue-400"
+                      ? "bg-gray-50 text-cobalt dark:bg-slate-800 dark:text-blue-400"
                       : "text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-slate-800",
                   )}
                 >
@@ -213,7 +210,7 @@ export default function Header() {
                   className={cn(
                     "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7",
                     pathname === "/about"
-                      ? "bg-gray-50 text-blue-700 dark:bg-slate-800 dark:text-blue-400"
+                      ? "bg-gray-50 text-cobalt dark:bg-slate-800 dark:text-blue-400"
                       : "text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-slate-800",
                   )}
                 >
@@ -224,7 +221,7 @@ export default function Header() {
                   className={cn(
                     "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7",
                     pathname === "/our-teams"
-                      ? "bg-gray-50 text-blue-700 dark:bg-slate-800 dark:text-blue-400"
+                      ? "bg-gray-50 text-cobalt dark:bg-slate-800 dark:text-blue-400"
                       : "text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-slate-800",
                   )}
                 >
@@ -238,7 +235,7 @@ export default function Header() {
                       "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7",
                       pathname === item.href
                         ? pathname === "/"
-                          ? "bg-gray-50 text-blue-700 dark:bg-slate-800 dark:text-blue-400"
+                          ? "bg-gray-50 text-cobalt dark:bg-slate-800 dark:text-blue-400"
                           : "bg-gray-50 text-cobalt dark:bg-slate-800"
                         : "text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-slate-800",
                     )}
