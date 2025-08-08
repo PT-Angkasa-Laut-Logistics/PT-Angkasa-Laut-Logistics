@@ -138,7 +138,12 @@ export default function Header() {
               <ChevronDown size={16} />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>Our Teams</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/about">About Us</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/our-teams">Our Teams</Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
