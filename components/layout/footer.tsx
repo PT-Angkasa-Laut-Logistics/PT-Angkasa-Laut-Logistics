@@ -16,8 +16,8 @@ export default function Footer() {
               className="h-14 w-auto max-md:h-10"
             />
             <div className="space-y-3 md:space-y-4 xl:col-span-1">
-              <h2 className="text-base font-bold md:text-2xl">
-                Angkasa Laut Logistics
+              <h2 className="text-aqua text-base font-bold md:text-2xl">
+                Angkasa Laut <span className="text-cobalt">Logistics</span>
               </h2>
               <p className="max-w-xs text-slate-400 max-md:text-xs">
                 We&apos;re here to streamline every step of your international
