@@ -111,14 +111,14 @@ export default function HeroSection() {
         className="absolute left-4 top-1/2 z-[21] -translate-y-1/2 rounded-full bg-white p-2 text-blue-800 transition-colors hover:bg-white/30"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-6 w-6 text-blue-800" />
+        <ChevronLeft className="h-6 w-6 text-cobalt" />
       </button>
       <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 z-[21] -translate-y-1/2 rounded-full bg-white p-2 text-blue-800 transition-colors hover:bg-white/30"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-6 w-6 text-blue-800" />
+        <ChevronRight className="h-6 w-6 text-cobalt" />
       </button>
 
       {/* Content */}
@@ -130,10 +130,10 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h1 className="mb-6 text-4xl font-semibold tracking-tight text-blue-700 sm:text-4xl md:text-5xl/[1.15]">
-              Reliable <span className="text-blue-400">Import-Export</span>{" "}
+            <h1 className="mb-6 text-4xl font-semibold tracking-tight text-cobalt sm:text-4xl md:text-5xl/[1.15]">
+              Reliable <span className="text-aqua">Import-Export</span>{" "}
               Logistics, Your <br /> Business Without{" "}
-              <span className="text-blue-400">Borders</span>
+              <span className="text-aqua">Borders</span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-sm text-black md:text-xl">
               Don't let hassle of logistics hamper your International market
