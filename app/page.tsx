@@ -10,6 +10,7 @@ import {
 import ProductList from "@/components/home/product-list";
 import HeroSection from "@/components/home/hero-section";
 import FeaturesSection from "@/components/home/features-section";
+import QuotesSection from "@/components/home/quotes-section";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
 
       {/* Features Section */}
       <FeaturesSection />
+
+      {/* Quotes Section */}
+      <QuotesSection />
 
       {/* Products Preview Section */}
       <section className="bg-slate-50 py-16 dark:bg-slate-900">

@@ -1,30 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 type Facility = {
   name: string;
+  description: string;
   iconPath: string;
+  imagePath: string;
 };
 
 const facilities: Facility[] = [
-  { name: "Stem Cell Processing Facility", iconPath: "/svg/Group.svg" },
-  { name: "Industrial QC Laboratory", iconPath: "/svg/qc.svg" },
-  { name: "Molecular Biology Laboratory", iconPath: "/svg/Molecular.svg" },
-  { name: "Educational Teaching Laboratory", iconPath: "/svg/Educational.svg" },
-  { name: "Clinical Laboratory", iconPath: "/svg/Clinical.svg" },
-  { name: "Clean Room", iconPath: "/svg/Cleanroom.svg" },
-  { name: "Pharmaceutical Manufacturing", iconPath: "/svg/Pharma.svg" },
-  { name: "Biocontainment Laboratory", iconPath: "/svg/Picture6.svg" },
-  { name: "Animal Research Facility", iconPath: "/svg/Animal.svg" },
-  { name: "Modular Operating Theater", iconPath: "/svg/Modular.svg" },
-  { name: "Research Laboratory", iconPath: "/svg/Research.svg" },
-  { name: "Mobile Laboratory on Container", iconPath: "/svg/Mobile.svg" },
+  {
+    name: "Consultation & Initial Planning",
+    description: "Consultation & Initial Planning.",
+    iconPath: "/svg/Group.svg",
+    imagePath: "/images/facility1.jpg",
+  },
+  {
+    name: "Custom Clearance & Documentation",
+    description: "Your Goods Clear, Fast, Compliant",
+    iconPath: "/svg/qc.svg",
+    imagePath: "/images/facility2.jpg",
+  },
+  {
+    name: "Shipping & Receiving Simplified",
+    description: "Effortless Cargo Flow, Every Time",
+    iconPath: "/svg/Molecular.svg",
+    imagePath: "/images/facility3.jpg",
+  },
 ];
 
-const FacilityCard = ({ name, iconPath }: Facility) => (
-  <div className="flex min-h-[90px] items-center rounded-xl border border-gray-100 bg-white p-4 shadow-md transition-shadow duration-300 hover:shadow-lg dark:border-gray-800 dark:bg-slate-900 sm:p-6">
+const FacilityCard = ({
+  name,
+  description,
+  iconPath,
+  isSelected,
+  onClick,
+}: Facility & { isSelected: boolean; onClick: () => void }) => (
+  <div
+    onClick={onClick}
+    className={`flex h-full min-h-[90px] cursor-pointer items-center rounded-xl border p-4 shadow-md transition-all duration-300 sm:p-6 ${
+      isSelected
+        ? "border-blue-700 bg-blue-600 text-white"
+        : "border-gray-100 bg-white text-gray-800 dark:border-gray-800 dark:bg-slate-900"
+    } hover:shadow-lg`}
+  >
     <div className="mr-5 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-100">
       <Image
         src={iconPath}
@@ -35,17 +57,30 @@ const FacilityCard = ({ name, iconPath }: Facility) => (
       />
     </div>
     <div className="flex flex-1 flex-col justify-center">
-      <h3 className="text-left text-base font-semibold text-gray-900 dark:text-gray-300 sm:text-lg">
+      <h3
+        className={`text-left text-base font-semibold sm:text-lg ${
+          isSelected ? "text-white" : "text-blue-700 dark:text-gray-300"
+        }`}
+      >
         {name}
       </h3>
+      <p
+        className={`text-left text-sm ${
+          isSelected ? "text-gray-200" : "text-gray-500"
+        }`}
+      >
+        {description}
+      </p>
     </div>
   </div>
 );
 
 export default function FeaturesSection() {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
+
   return (
     <section className="bg-white py-24 dark:bg-slate-950">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,13 +88,19 @@ export default function FeaturesSection() {
           transition={{ duration: 0.5 }}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <h2 className="mb-4 text-xl font-bold tracking-tight text-blue-800 sm:text-4xl">
-            We Don&apos;t Just Build… <br />
-            ...We Actualize Your Concepts
+          <h2 className="mb-4 text-xl font-semibold tracking-tight text-gray-600 sm:text-4xl">
+            How <span className="text-blue-400">Angkasa Laut</span>{" "}
+            <span className="text-blue-700">Logistics</span> Streamlines Your
+            International Business
           </h2>
+          <p className="mb-4 text-sm font-normal tracking-tight text-gray-500 md:text-lg">
+            We're here to streamline every step of your international freight
+            shipment.
+          </p>
         </motion.div>
 
-        <div className="grid auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* Grid Card */}
+        <div className="grid auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {facilities.map((facility, index) => (
             <motion.div
               key={facility.name}
@@ -69,10 +110,36 @@ export default function FeaturesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="h-full w-full"
             >
-              <FacilityCard name={facility.name} iconPath={facility.iconPath} />
+              <FacilityCard
+                {...facility}
+                isSelected={selectedIndex === index}
+                onClick={() => setSelectedIndex(index)}
+              />
             </motion.div>
           ))}
         </div>
+
+        {/* Gambar besar */}
+        <AnimatePresence mode="wait">
+          {selectedIndex !== null && (
+            <motion.div
+              key={facilities[selectedIndex].imagePath} // biar trigger animasi tiap ganti gambar
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="mt-12 flex justify-center"
+            >
+              <Image
+                src={facilities[selectedIndex].imagePath}
+                alt={facilities[selectedIndex].name}
+                width={1000}
+                height={500}
+                className="rounded-xl object-cover shadow-lg"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
