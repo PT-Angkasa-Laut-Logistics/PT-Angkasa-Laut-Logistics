@@ -30,7 +30,7 @@ export default function ContactHero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-tr from-sky-500 from-5% to-cobalt py-24 dark:bg-slate-900 dark:text-white">
+    <section className="relative overflow-hidden bg-gradient-to-tr from-sky-500 from-5% to-cobalt pb-24 pt-32 dark:bg-slate-900 dark:text-white">
       {/* Abstract background shapes */}
       <div className="absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-blue-500 opacity-20 blur-3xl" />
       <div className="absolute -bottom-20 right-1/4 h-80 w-80 rounded-full bg-blue-400 opacity-20 blur-3xl" />
