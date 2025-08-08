@@ -10,7 +10,7 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    image: "/images/slide1.jpg",
+    image: "/images/hero-section.jpg",
     alt: "Professional team working on building plans",
   },
   {
@@ -50,7 +50,8 @@ export default function HeroSection() {
         <div className="relative flex h-full items-center justify-center">
           <div className="container relative z-20 mx-auto px-4 text-center">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              PT Symbiocon Solusi Integra
+              Reliable <span>Import-Export</span> Logistics, Your Business
+              Without <span>Borders</span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-xl text-white">
               We are an Integrated Solution Provider for Scientific Facility
@@ -59,17 +60,17 @@ export default function HeroSection() {
             <div className="space-x-4">
               <Link href="/products">
                 <Button
-                  size="lg"
-                  className="hover:bg-cobalt-80 bg-cobalt font-semibold dark:text-white"
+                  size="sm"
+                  className="hover:bg-cobalt-80 bg-cobalt font-medium dark:text-white"
                 >
-                  Explore Products
+                  Our Services
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button
-                  size="lg"
+                  size="sm"
                   variant="outline"
-                  className="border-white font-semibold hover:bg-white/80 dark:bg-gray-800 dark:text-white"
+                  className="border-white font-medium hover:bg-white/80 dark:bg-gray-800 dark:text-white"
                 >
                   Contact Us
                 </Button>
@@ -129,19 +130,14 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-blue-800 sm:text-5xl md:text-6xl">
-              PT Symbiocon Solusi Integra
+            <h1 className="mb-6 text-4xl font-semibold tracking-tight text-blue-700 sm:text-4xl md:text-5xl/[1.15]">
+              Reliable <span className="text-blue-400">Import-Export</span>{" "}
+              Logistics, Your <br /> Business Without{" "}
+              <span className="text-blue-400">Borders</span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-sm text-black md:text-xl">
-              We are an{" "}
-              <span className="font-semibold text-blue-600">
-                Integrated Solution
-              </span>{" "}
-              Provider for{" "}
-              <span className="font-semibold text-blue-600">
-                Scientific Facility
-              </span>{" "}
-              Construction
+              Don't let hassle of logistics hamper your International market
+              potential.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -151,17 +147,17 @@ export default function HeroSection() {
             >
               <Link href="/products">
                 <Button
-                  size="lg"
-                  className="bg-cobalt font-semibold hover:bg-cobalt/80 dark:text-white max-md:text-sm"
+                  size="sm"
+                  className="bg-cobalt font-medium hover:bg-cobalt/80 dark:text-white max-md:text-sm"
                 >
-                  Explore Products
+                  Our Services
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button
-                  size="lg"
+                  size="sm"
                   variant="outline"
-                  className="font-semibold text-black hover:bg-white/80 dark:text-white dark:hover:bg-gray-800 max-md:text-sm"
+                  className="font-medium text-black hover:bg-white/80 dark:text-white dark:hover:bg-gray-800 max-md:text-sm"
                 >
                   Contact Us
                 </Button>
