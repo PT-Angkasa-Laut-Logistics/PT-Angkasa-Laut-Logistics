@@ -50,7 +50,8 @@ export default function HeroSection() {
         <div className="relative flex h-full items-center justify-center">
           <div className="container relative z-20 mx-auto px-4 text-center">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              PT Symbiocon Solusi Integra
+              Reliable <span>Import-Export</span> Logistics, Your Business
+              Without <span>Borders</span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-xl text-white">
               We are an Integrated Solution Provider for Scientific Facility
