@@ -69,7 +69,7 @@ export default function AboutContent() {
             Our vision is to actualize our clients requirements for laboratory
             facilities that are innovatively planned, compliant with safety
             imperatives, and operationally efficient, thereby fostering the
-            advancement of science and technology.
+            advancement of science and technology. testing
           </motion.p>
           <div className="flex items-center gap-4">
             <a target="_blank" href={pdfUrl} rel="noopener noreferrer">
