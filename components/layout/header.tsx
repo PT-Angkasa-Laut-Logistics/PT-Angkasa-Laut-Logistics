@@ -100,9 +100,9 @@ export default function Header() {
                   alt="Logo"
                   width={56}
                   height={56}
-                  className="dark:brightness-150"
+                  className="dark:brightness-150 max-md:h-10 max-md:w-10"
                 />
-                <p className="text-aqua font-semibold">
+                <p className="text-aqua font-semibold max-md:text-base">
                   Angkasa Laut <span className="text-cobalt">Logistics</span>
                 </p>
               </span>
