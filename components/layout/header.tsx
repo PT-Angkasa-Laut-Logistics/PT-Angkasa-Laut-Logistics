@@ -3,16 +3,21 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/theme-toggle";
 import Image from "next/image";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Products & Equipment", href: "/products" },
+  { name: "Services", href: "/services" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -78,11 +83,11 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">PT Symbiocon Solusi Integra</span>
+            <span className="sr-only">Angkasa Laut Logisctics</span>
             <div className="flex items-center">
               <span
                 className={cn(
-                  "text-xl font-bold transition-colors",
+                  "flex items-center gap-2 text-xl font-bold transition-colors",
                   scrolled
                     ? "text-white"
                     : isHome
@@ -91,12 +96,15 @@ export default function Header() {
                 )}
               >
                 <Image
-                  src="/images/logo-animated.png"
+                  src="/images/al-logo.svg"
                   alt="Logo"
-                  width={120}
-                  height={120}
+                  width={56}
+                  height={56}
                   className="dark:brightness-150"
                 />
+                <p className="text-aqua font-semibold">
+                  Angkasa Laut <span className="text-cobalt">Logistics</span>
+                </p>
               </span>
             </div>
           </Link>
@@ -118,7 +126,22 @@ export default function Header() {
             />
           </Button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-10">
+          <Link href={"/"} className={getLinkStyle("/")}>
+            Home
+          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              className={`flex items-center gap-2 ${getLinkStyle("/about")}`}
+            >
+              About
+              <ChevronDown size={16} />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>Our Teams</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -128,9 +151,6 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-        </div>
-        <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-4">
-          <ThemeToggle />
         </div>
       </nav>
 
@@ -145,11 +165,18 @@ export default function Header() {
         <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">angkasa laut compro</span>
-              <div className="flex items-center">
-                <span className="text-lg font-bold text-blue-700 dark:text-blue-400">
-                  angkasa laut compro
-                </span>
+              <span className="sr-only">Angkasa Laut Logistics</span>
+              <div className="flex items-center gap-4">
+                <Image
+                  src="/images/al-logo.svg"
+                  alt="Logo"
+                  width={42}
+                  height={42}
+                  className="dark:brightness-150"
+                />
+                <p className="text-aqua text-lg font-semibold">
+                  Angkasa Laut <span className="text-cobalt">Logistics</span>
+                </p>
               </div>
             </Link>
             <Button
@@ -164,6 +191,39 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <Link
+                  href={"/"}
+                  className={cn(
+                    "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7",
+                    pathname === "/"
+                      ? "bg-gray-50 text-blue-700 dark:bg-slate-800 dark:text-blue-400"
+                      : "text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-slate-800",
+                  )}
+                >
+                  Home
+                </Link>
+                <Link
+                  href={"/about"}
+                  className={cn(
+                    "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7",
+                    pathname === "/about"
+                      ? "bg-gray-50 text-blue-700 dark:bg-slate-800 dark:text-blue-400"
+                      : "text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-slate-800",
+                  )}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href={"/our-teams"}
+                  className={cn(
+                    "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7",
+                    pathname === "/our-teams"
+                      ? "bg-gray-50 text-blue-700 dark:bg-slate-800 dark:text-blue-400"
+                      : "text-gray-900 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-slate-800",
+                  )}
+                >
+                  Our Teams
+                </Link>
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
