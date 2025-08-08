@@ -11,6 +11,7 @@ import ProductList from "@/components/home/product-list";
 import HeroSection from "@/components/home/hero-section";
 import FeaturesSection from "@/components/home/features-section";
 import QuotesSection from "@/components/home/quotes-section";
+import LocationSection from "@/components/home/location-section";
 
 export default function Home() {
   return (
@@ -24,8 +25,11 @@ export default function Home() {
       {/* Quotes Section */}
       <QuotesSection />
 
+      {/* Location Section */}
+      <LocationSection />
+
       {/* Products Preview Section */}
-      <section className="bg-slate-50 py-16 dark:bg-slate-900">
+      <section className="bg-slate-100 py-16 dark:bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-blue-800 sm:text-4xl">

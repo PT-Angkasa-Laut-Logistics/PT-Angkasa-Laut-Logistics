@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function QuotesSection() {
   return (
-    <section className="bg-white dark:bg-slate-950">
+    <section className="mb-10 dark:bg-slate-950">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

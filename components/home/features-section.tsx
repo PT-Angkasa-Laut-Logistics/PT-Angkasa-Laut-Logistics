@@ -44,7 +44,7 @@ const FacilityCard = ({
     className={`flex h-full min-h-[90px] cursor-pointer items-center rounded-xl border p-4 shadow-md transition-all duration-300 sm:p-6 ${
       isSelected
         ? "bg-cobalt text-white"
-        : "bg-white text-gray-800 dark:border-gray-800 dark:bg-slate-900"
+        : "bg-slate-100 text-gray-800 dark:border-gray-800 dark:bg-slate-900"
     } hover:shadow-lg`}
   >
     <div className="mr-5 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-100">
@@ -79,7 +79,7 @@ export default function FeaturesSection() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative overflow-x-hidden bg-white py-24 dark:bg-slate-950">
+    <section className="relative overflow-x-hidden bg-slate-100 py-24 dark:bg-slate-950">
       <Image
         src="/images/world.png"
         alt="Background image"
