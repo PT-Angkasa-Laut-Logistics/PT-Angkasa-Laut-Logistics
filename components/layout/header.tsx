@@ -74,7 +74,9 @@ export default function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "bg-white shadow-sm dark:bg-gray-900" : "bg-transparent",
+        scrolled
+          ? "bg-white shadow-sm dark:bg-gray-900"
+          : "bg-white/80 backdrop-blur-sm",
       )}
     >
       <nav
