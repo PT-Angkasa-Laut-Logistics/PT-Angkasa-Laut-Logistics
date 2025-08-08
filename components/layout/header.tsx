@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "@/components/theme-toggle";
+
 import Image from "next/image";
 import {
   DropdownMenu,
@@ -110,7 +110,6 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex items-center gap-4 lg:hidden">
-          <ThemeToggle />
           <Button
             variant="ghost"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
