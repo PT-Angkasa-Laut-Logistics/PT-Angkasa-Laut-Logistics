@@ -13,7 +13,7 @@ export default function Footer() {
               width={100}
               height={100}
               alt="logo"
-              className="h-14 w-auto"
+              className="h-14 w-auto max-md:h-10"
             />
             <div className="space-y-3 md:space-y-4 xl:col-span-1">
               <h2 className="text-base font-bold md:text-2xl">
