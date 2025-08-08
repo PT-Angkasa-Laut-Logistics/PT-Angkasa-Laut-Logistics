@@ -30,40 +30,24 @@ export default function ContactHero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-white pb-24 pt-40 dark:bg-slate-900 dark:text-white">
-      <div className="absolute inset-0 opacity-30 dark:opacity-20">
-        {/* <div className="bg-grid-white/[0.2] absolute inset-0" /> */}
-        <Image
-          src="/images/contactus-banner.jpg"
-          alt="Laboratory equipment"
-          fill
-          className="object-cover"
-        />
-      </div>
-
+    <section className="relative overflow-hidden bg-gradient-to-tr from-sky-500 from-5% to-cobalt py-24 dark:bg-slate-900 dark:text-white">
       {/* Abstract background shapes */}
       <div className="absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-blue-500 opacity-20 blur-3xl" />
       <div className="absolute -bottom-20 right-1/4 h-80 w-80 rounded-full bg-blue-400 opacity-20 blur-3xl" />
 
       <div className="container relative z-10 mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-5xl space-y-4 text-center">
+          <h2 className="mx-auto w-fit rounded-full bg-slate-100 px-4 py-2 font-semibold text-cobalt">
+            Let&apos;s Connect
+          </h2>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 text-4xl font-bold tracking-tight text-cobalt dark:text-gray-200 sm:text-5xl md:text-6xl"
+            className="mb-6 font-sans text-4xl font-medium tracking-tight text-white dark:text-gray-200 sm:text-5xl md:text-6xl"
           >
-            Contact Us
+            Start Your Logistics Journey
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto mb-10 max-w-2xl text-xl text-cobalt dark:text-gray-200"
-          >
-            Get in touch with our team for inquiries about our products and
-            services.
-          </motion.p>
         </div>
       </div>
     </section>
