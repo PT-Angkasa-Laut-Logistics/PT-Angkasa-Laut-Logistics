@@ -10,17 +10,17 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    image: "/images/hero-section.jpg",
+    image: "/images/hero-section1.jpg",
     alt: "Professional team working on building plans",
   },
   {
     id: 2,
-    image: "/images/slide2.png",
+    image: "/images/hero-section2.jpg",
     alt: "Construction site planning",
   },
   {
     id: 3,
-    image: "/images/hero-image4.png",
+    image: "/images/hero-section3.jpg",
     alt: "Architecture and planning",
   },
 ];
