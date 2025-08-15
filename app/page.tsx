@@ -1,13 +1,3 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Beaker,
-  Microscope,
-  FlaskRound as Flask,
-  Atom,
-} from "lucide-react";
-import ProductList from "@/components/home/product-list";
 import HeroSection from "@/components/home/hero-section";
 import FeaturesSection from "@/components/home/features-section";
 import QuotesSection from "@/components/home/quotes-section";

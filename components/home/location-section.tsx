@@ -12,7 +12,7 @@ import {
 
 export default function LocationSection() {
   return (
-    <section className="my-10 grid gap-8 px-20 lg:grid-cols-2">
+    <section className="relative my-10 grid gap-8 overflow-x-hidden px-20 lg:grid-cols-2">
       <motion.article
         className="flex flex-col justify-center gap-4 max-lg:order-2 lg:gap-8"
         variants={CONTAINER_ANIMATION}
@@ -48,6 +48,14 @@ export default function LocationSection() {
           </Link>
         </div>
       </motion.article>
+
+      <Image
+        src="/images/location-addons.png"
+        alt="Location-addons"
+        width={1000}
+        height={500}
+        className="absolute left-1/3 top-1/3 object-cover"
+      />
 
       <figure className="relative mb-6 flex h-40 w-full overflow-hidden rounded-2xl border-4 border-aqua bg-gray-100 max-lg:order-1 md:h-56 lg:h-80">
         <iframe
