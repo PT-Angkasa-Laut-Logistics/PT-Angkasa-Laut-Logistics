@@ -96,7 +96,7 @@ export default function FeaturesSection() {
           transition={{ duration: 0.5 }}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <h2 className="mb-4 text-xl font-semibold tracking-tight text-gray-600 sm:text-4xl">
+          <h2 className="mb-4 mt-8 text-xl font-semibold tracking-tight text-gray-600 sm:text-4xl">
             How <span className="text-aqua">Angkasa Laut</span>{" "}
             <span className="text-cobalt">Logistics</span> Streamlines Your
             International Business

@@ -131,12 +131,12 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h1 className="mb-6 text-4xl font-semibold tracking-tight text-cobalt sm:text-4xl md:text-5xl/[1.15]">
+            <h1 className="mb-6 mt-20 text-3xl font-semibold tracking-tight text-cobalt sm:text-4xl md:text-5xl/[1.15]">
               Empowering <span className="text-aqua">Global Trade</span> with
               Reliable, <br /> Transparent, and Flexible{" "}
               <span className="text-aqua">Logistics</span>
             </h1>
-            <p className="mx-auto mb-10 max-w-2xl text-sm text-black md:text-xl">
+            <p className="mx-auto mb-8 max-w-2xl text-sm font-medium text-black md:text-lg">
               We simplify complex logistics processes, ensuring every shipment
               is handled with precision and delivered with confidence.
             </p>
@@ -146,7 +146,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="gap-2 space-x-4 max-md:flex max-md:flex-col"
             >
-              <Link href="/products">
+              <Link href="/services">
                 <Button
                   size="sm"
                   className="bg-cobalt font-medium hover:bg-cobalt/80 dark:text-white max-md:text-sm"
