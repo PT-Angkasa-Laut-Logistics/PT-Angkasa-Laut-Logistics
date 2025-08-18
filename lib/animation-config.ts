@@ -31,7 +31,7 @@ export const ANIMATE_LEFT = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       ease: [0.33, 1, 0.68, 1],
     },
   },
@@ -46,7 +46,7 @@ export const ANIMATE_DOWN = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       ease: [0.33, 1, 0.68, 1],
     },
   },
