@@ -10,17 +10,17 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    image: "/images/slide1.jpg",
+    image: "/images/hero-section1.jpg",
     alt: "Professional team working on building plans",
   },
   {
     id: 2,
-    image: "/images/slide2.png",
+    image: "/images/hero-section2.jpg",
     alt: "Construction site planning",
   },
   {
     id: 3,
-    image: "/images/hero-image4.png",
+    image: "/images/hero-section3.jpg",
     alt: "Architecture and planning",
   },
 ];
@@ -49,27 +49,29 @@ export default function HeroSection() {
         </div>
         <div className="relative flex h-full items-center justify-center">
           <div className="container relative z-20 mx-auto px-4 text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              PT Symbiocon Solusi Integra
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-cobalt sm:text-5xl md:text-6xl">
+              Empowering <span className="text-aqua">Global Trade</span> with
+              Reliable, <br /> Transparent, and Flexible{" "}
+              <span className="text-aqua">Logistics</span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-xl text-white">
-              We are an Integrated Solution Provider for Scientific Facility
-              Construction
+              We simplify complex logistics processes, ensuring every shipment
+              is handled with precision and delivered with confidence.
             </p>
             <div className="space-x-4">
               <Link href="/products">
                 <Button
-                  size="lg"
-                  className="hover:bg-cobalt-80 bg-cobalt font-semibold dark:text-white"
+                  size="sm"
+                  className="hover:bg-cobalt-80 bg-cobalt font-medium dark:text-white"
                 >
-                  Explore Products
+                  Our Services
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button
-                  size="lg"
+                  size="sm"
                   variant="outline"
-                  className="border-white font-semibold hover:bg-white/80 dark:bg-gray-800 dark:text-white"
+                  className="border-white font-medium hover:bg-white/80 dark:bg-gray-800 dark:text-white"
                 >
                   Contact Us
                 </Button>
@@ -110,14 +112,14 @@ export default function HeroSection() {
         className="absolute left-4 top-1/2 z-[21] -translate-y-1/2 rounded-full bg-white p-2 text-blue-800 transition-colors hover:bg-white/30"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-6 w-6 text-blue-800" />
+        <ChevronLeft className="h-6 w-6 text-cobalt" />
       </button>
       <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 z-[21] -translate-y-1/2 rounded-full bg-white p-2 text-blue-800 transition-colors hover:bg-white/30"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-6 w-6 text-blue-800" />
+        <ChevronRight className="h-6 w-6 text-cobalt" />
       </button>
 
       {/* Content */}
@@ -129,19 +131,14 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-blue-800 sm:text-5xl md:text-6xl">
-              PT Symbiocon Solusi Integra
+            <h1 className="mb-6 text-4xl font-semibold tracking-tight text-cobalt sm:text-4xl md:text-5xl/[1.15]">
+              Empowering <span className="text-aqua">Global Trade</span> with
+              Reliable, <br /> Transparent, and Flexible{" "}
+              <span className="text-aqua">Logistics</span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-sm text-black md:text-xl">
-              We are an{" "}
-              <span className="font-semibold text-blue-600">
-                Integrated Solution
-              </span>{" "}
-              Provider for{" "}
-              <span className="font-semibold text-blue-600">
-                Scientific Facility
-              </span>{" "}
-              Construction
+              We simplify complex logistics processes, ensuring every shipment
+              is handled with precision and delivered with confidence.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -151,17 +148,17 @@ export default function HeroSection() {
             >
               <Link href="/products">
                 <Button
-                  size="lg"
-                  className="bg-cobalt font-semibold hover:bg-cobalt/80 dark:text-white max-md:text-sm"
+                  size="sm"
+                  className="bg-cobalt font-medium hover:bg-cobalt/80 dark:text-white max-md:text-sm"
                 >
-                  Explore Products
+                  Our Services
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button
-                  size="lg"
+                  size="sm"
                   variant="outline"
-                  className="font-semibold text-black hover:bg-white/80 dark:text-white dark:hover:bg-gray-800 max-md:text-sm"
+                  className="font-medium text-black hover:bg-white/80 dark:text-white dark:hover:bg-gray-800 max-md:text-sm"
                 >
                   Contact Us
                 </Button>
