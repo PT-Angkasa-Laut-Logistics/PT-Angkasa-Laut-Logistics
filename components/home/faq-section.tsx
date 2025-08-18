@@ -14,23 +14,23 @@ type FaqItem = { q: string; a: string };
 const faqs: FaqItem[] = [
   {
     q: "What are the main services offered by Angkasa Laut Logistics?",
-    a: "We provide end-to-end import/export handling: consultation & planning, customs clearance and documentation, international shipping, warehousing, and last-mile delivery. Services can be bundled or taken separately sesuai kebutuhan proyek.",
+    a: "We offer comprehensive logistics solutions that cover domestic and international freight forwarding, customs clearance, warehousing, and last-mile delivery. Every service is tailored to ensure your goods move seamlessly across borders, on time, and with maximum reliability.",
   },
   {
-    q: "What types of goods can be shipped via Angkasa Laut Logistics?",
-    a: "General cargo, laboratory equipment, pharmaceutical supplies, temperature-controlled items, and oversized goods. Untuk kategori khusus (hazmat/regulated), tim compliance kami bantu cek izin & packing standardnya.",
+    q: "What type of goods can be shipped via Angkasa Laut Logistics?",
+    a: "Everything, from general goods and daily consumer products to heavy industrial machinery, we can handle a broad range of cargo. For regulated or hazardous items, our team ensures all necessary compliance and documentation are met, giving you peace of mind.",
   },
   {
-    q: "How long does customs clearance usually take?",
-    a: "Umumnya 1–3 hari kerja setelah dokumen lengkap dan pemeriksaan selesai. Waktu bisa berubah tergantung jenis barang, pelabuhan/bandara, serta antrian pemeriksaan otoritas.",
+    q: "How do I submit a bid or start shipping",
+    a: "Simply reach out to us via our official website, email, phone, WhatsApp, or social media. Provide the shipment details, type of goods, quantity, origin, and destination, and our experts will prepare a competitive quote and walk you through every step until your cargo is safely delivered and received in good condition.",
   },
   {
-    q: "Can you handle door-to-door shipments?",
-    a: "Bisa. Kami urus pick-up, export formalities, international freight, import clearance, sampai delivery ke lokasi tujuan—satu PIC, satu tracking.",
+    q: "How will I be updated about my shipment status?",
+    a: "With full transparency, we actively monitor every stage of your shipment’s journey and provide personalized updates directly to you. Through phone, email, messaging apps, or social media, our team ensures you are always informed about your cargo’s location and condition.",
   },
   {
-    q: "How do I get a quotation?",
-    a: "Kirim detail barang (HS code kalau ada), dimensi/berat, asal-tujuan, incoterms, dan timeline via halaman Contact. Tim sales akan kirim proposal & ETA dalam bentuk breakdown biaya transparan.",
+    q: "What makes Angkasa Laut Logistics different from other logistics providers?",
+    a: "We don’t just move goods, we build pathways for your business. With us, borders become opportunities, and every shipment is handled with a blend of expertise, trust, and personal attention. Our commitment to reliability, competitive pricing, and strong partnerships ensures your business can confidently reach any market.",
   },
 ];
 

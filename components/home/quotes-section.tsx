@@ -23,8 +23,9 @@ export default function QuotesSection() {
               className="absolute top-0 mx-auto h-[450px] w-[960px] object-cover opacity-20"
             />
             <p className="relative text-lg font-medium tracking-tight text-white sm:text-4xl">
-              “We are more than just a logistics service. We connect countries
-              and opportunities. Global solutions for your local needs.”
+              "Borders are just lines on a map. We turn them into pathways,
+              ensuring your business reaches every market with confidence and
+              trust."
             </p>
           </div>
         </motion.div>

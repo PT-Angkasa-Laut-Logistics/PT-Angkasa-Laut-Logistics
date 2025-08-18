@@ -49,13 +49,14 @@ export default function HeroSection() {
         </div>
         <div className="relative flex h-full items-center justify-center">
           <div className="container relative z-20 mx-auto px-4 text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Reliable <span>Import-Export</span> Logistics, Your Business
-              Without <span>Borders</span>
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-cobalt sm:text-5xl md:text-6xl">
+              Empowering <span className="text-aqua">Global Trade</span> with
+              Reliable, <br /> Transparent, and Flexible{" "}
+              <span className="text-aqua">Logistics</span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-xl text-white">
-              We are an Integrated Solution Provider for Scientific Facility
-              Construction
+              We simplify complex logistics processes, ensuring every shipment
+              is handled with precision and delivered with confidence.
             </p>
             <div className="space-x-4">
               <Link href="/products">
@@ -131,13 +132,13 @@ export default function HeroSection() {
             className="text-center"
           >
             <h1 className="mb-6 text-4xl font-semibold tracking-tight text-cobalt sm:text-4xl md:text-5xl/[1.15]">
-              Reliable <span className="text-aqua">Import-Export</span>{" "}
-              Logistics, Your <br /> Business Without{" "}
-              <span className="text-aqua">Borders</span>
+              Empowering <span className="text-aqua">Global Trade</span> with
+              Reliable, <br /> Transparent, and Flexible{" "}
+              <span className="text-aqua">Logistics</span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-sm text-black md:text-xl">
-              Don't let hassle of logistics hamper your International market
-              potential.
+              We simplify complex logistics processes, ensuring every shipment
+              is handled with precision and delivered with confidence.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
