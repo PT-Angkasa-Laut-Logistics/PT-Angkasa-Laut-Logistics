@@ -58,7 +58,7 @@ const services: ServiceItem[] = [
 export default function ServicesContent() {
   return (
     <section className="py-16 dark:bg-slate-950">
-      <div className="container mx-auto">
+      <div className="mx-auto 2xl:container">
         <div className="flex flex-col gap-24">
           {services.map((item, i) =>
             item.reverse ? (
