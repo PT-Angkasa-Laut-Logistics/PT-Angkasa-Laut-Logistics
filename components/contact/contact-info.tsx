@@ -5,7 +5,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { ANIMATE_LEFT, CONTAINER_ANIMATION } from "@/lib/animation-config";
+import {
+  ANIMATE_DOWN,
+  ANIMATE_LEFT,
+  CONTAINER_ANIMATION,
+} from "@/lib/animation-config";
 import Image from "next/image";
 /**
  * A component that displays the contact information of Company.
@@ -13,7 +17,7 @@ import Image from "next/image";
  * @returns The ContactInformation component.
  */
 export default function ContactInfo() {
-  const phone_number = "+6281995515519";
+  const phone_number = "+6282210491981";
   const message =
     "Halo Symbiocon, saya tertarik dengan produk dan layanan anda...";
   const wa_url = `https://wa.me/${phone_number}?text=${encodeURIComponent(message)}`;
@@ -35,11 +39,15 @@ export default function ContactInfo() {
         animate="visible"
         className="relative"
       >
-        <h2 className="mb-2 text-2xl font-bold md:mb-6">Contact Information</h2>
-        <p className="mb-8 text-muted-foreground max-md:text-sm">
-          Feel free to contact us with any questions about our products and
-          services. Our team is always ready to assist you.
-        </p>
+        <motion.article variants={ANIMATE_DOWN}>
+          <h2 className="mb-2 text-2xl font-bold md:mb-4">
+            Contact Information
+          </h2>
+          <p className="mb-8 text-muted-foreground max-md:text-sm">
+            Feel free to contact us with any questions about our products and
+            services. Our team is always ready to assist you.
+          </p>
+        </motion.article>
 
         <div className="space-y-6">
           <div className="flex items-start">
@@ -49,10 +57,9 @@ export default function ContactInfo() {
             <motion.div variants={ANIMATE_LEFT} className="ml-4">
               <h3 className="text-lg font-semibold">Address</h3>
               <p className="text-muted-foreground max-md:text-sm">
-                Kawasan Industri Jababeka
-                <br />
-                Blok K No.8A, Jl. Jababeka XI A, Harja Mekar, Cikarang Utara,
-                Bekasi Regency, West Java 17530, Indonesia
+                Jl. Gading Kirana Timur A.11/15, Desa/Kelurahan Kelapa Gading
+                Barat, Kec. Kelapa Gading, Kota Adm. Jakarta Utara, DKI Jakarta
+                14240
               </p>
             </motion.div>
           </div>
@@ -64,7 +71,7 @@ export default function ContactInfo() {
             <motion.div variants={ANIMATE_LEFT} className="ml-4">
               <h3 className="text-lg font-semibold">Phone</h3>
               <p className="text-muted-foreground max-md:text-sm">
-                +62 21 5010 6780
+                021-31118055
               </p>
             </motion.div>
           </div>
@@ -84,7 +91,7 @@ export default function ContactInfo() {
             <motion.div variants={ANIMATE_LEFT} className="ml-4">
               <h3 className="text-lg font-semibold">WhatsApp</h3>
               <p className="text-muted-foreground max-md:text-sm">
-                +62 819 9551 5519
+                +62 822 1049 1981
               </p>
             </motion.div>
           </div>
@@ -96,7 +103,7 @@ export default function ContactInfo() {
             <motion.div variants={ANIMATE_LEFT} className="ml-4">
               <h3 className="text-lg font-semibold">Email</h3>
               <p className="text-muted-foreground max-md:text-sm">
-                info@symbiocon.com
+                cs1@allogistik.com
               </p>
             </motion.div>
           </div>
