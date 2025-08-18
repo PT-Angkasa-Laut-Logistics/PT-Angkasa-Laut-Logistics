@@ -30,7 +30,7 @@ export default function ContactInfo() {
           alt="Contact Information"
           width={100}
           height={100}
-          className="top-1/5 absolute inset-0 h-[520px] w-[520px] opacity-10"
+          className="top-1/5 absolute inset-0 h-[520px] w-[520px] object-contain opacity-10"
         />
       </figure>
       <motion.div
@@ -103,7 +103,7 @@ export default function ContactInfo() {
             <motion.div variants={ANIMATE_LEFT} className="ml-4">
               <h3 className="text-lg font-semibold">Email</h3>
               <p className="text-muted-foreground max-md:text-sm">
-                cs1@allogistik.com
+                cs1.jkt@allogistik.com
               </p>
             </motion.div>
           </div>
@@ -124,28 +124,34 @@ export default function ContactInfo() {
         </div>
       </motion.div>
 
-      <Card className="relative border-blue-200 bg-blue-50 p-6 dark:border-blue-800 dark:bg-blue-900/30">
-        <div className="flex items-start">
-          <div className="mt-1 flex-shrink-0">
-            <MessageSquare className="h-10 w-10 text-blue-600 dark:text-blue-400" />
-          </div>
-          <div className="ml-4">
-            <h3 className="text-lg font-semibold max-md:text-base">
-              WhatsApp Support
-            </h3>
-            <p className="mb-4 text-muted-foreground max-md:text-sm">
-              Contact us directly on WhatsApp for quick responses to your
-              inquiries.
-            </p>
+      <motion.div
+        variants={ANIMATE_DOWN}
+        whileInView="visible"
+        initial="hidden"
+      >
+        <Card className="relative border-blue-200 bg-blue-50 p-6 dark:border-blue-800 dark:bg-blue-900/30">
+          <div className="flex items-start">
+            <div className="mt-1 flex-shrink-0">
+              <MessageSquare className="h-10 w-10 text-blue-600 dark:text-blue-400" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-lg font-semibold max-md:text-base">
+                WhatsApp Support
+              </h3>
+              <p className="mb-4 text-muted-foreground max-md:text-sm">
+                Contact us directly on WhatsApp for quick responses to your
+                inquiries.
+              </p>
 
-            <Link href={wa_url} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-green-600 hover:bg-green-700 max-md:text-sm">
-                Chat on WhatsApp
-              </Button>
-            </Link>
+              <Link href={wa_url} target="_blank" rel="noopener noreferrer">
+                <Button className="bg-green-600 hover:bg-green-700 max-md:text-sm">
+                  Chat on WhatsApp
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </Card>
+        </Card>
+      </motion.div>
     </div>
   );
 }

@@ -15,14 +15,17 @@ export default function Footer() {
               alt="logo"
               className="h-14 w-auto max-md:h-10"
             />
-            <div className="space-y-3 md:space-y-4 xl:col-span-1">
-              <h2 className="text-aqua text-base font-bold md:text-2xl">
+            <div className="space-y-2 xl:col-span-1">
+              <h2 className="text-base font-bold text-aqua md:text-2xl">
                 Angkasa Laut <span className="text-cobalt">Logistics</span>
               </h2>
-              <p className="max-w-xs text-slate-400 max-md:text-xs">
-                We&apos;re here to streamline every step of your international
-                freight shipment.
-              </p>
+              <Image
+                src="/svg/footer-signature.svg"
+                width={200}
+                height={100}
+                className="mb-4 h-5 w-auto brightness-50 md:h-7"
+                alt="signature"
+              />
               <div className="flex space-x-6">
                 <a
                   href="https://www.instagram.com/symbiocon.id/"
@@ -119,21 +122,19 @@ export default function Footer() {
                   <li className="flex items-start">
                     <MapPin className="h-5 w-5 flex-shrink-0 text-cobalt" />
                     <span className="ml-3 text-slate-600">
-                      Kawasan Industri Jababeka Blok K No.8A, Jl. Jababeka XI A,
-                      Harja Mekar, Cikarang Utara, Bekasi Regency, West Java
-                      17530, Indonesia
+                      Jl. Gading Kirana Timur A.11/15, Desa/Kelurahan Kelapa
+                      Gading Barat, Kec. Kelapa Gading, Kota Adm. Jakarta Utara,
+                      DKI Jakarta 14240
                     </span>
                   </li>
                   <li className="flex">
                     <Phone className="h-5 w-5 flex-shrink-0 text-cobalt" />
-                    <span className="ml-3 text-slate-600">
-                      +62 21 5010 6780
-                    </span>
+                    <span className="ml-3 text-slate-600">021-31118055</span>
                   </li>
                   <li className="flex">
                     <Mail className="h-5 w-5 flex-shrink-0 text-cobalt" />
                     <span className="ml-3 text-slate-600 max-md:text-xs">
-                      info@angkasalaut.com
+                      cs1.jkt@allogistik.com
                     </span>
                   </li>
                 </ul>

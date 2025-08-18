@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { ANIMATE_DOWN } from "@/lib/animation-config";
 
 const formSchema = z.object({
   fullName: z.string().min(2, {
@@ -81,8 +83,8 @@ export default function ContactForm() {
 
       // Prepare WhatsApp URL with the formatted message
       const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/123456789?text=${encodedMessage}`;
-      const mailtoUrl = `mailto:info@symbiocon.com?subject=${data.subject}&body=${data.message}`;
+      const whatsappUrl = `https://wa.me/+6282210491981?text=${encodedMessage}`;
+      const mailtoUrl = `mailto:cs1.jkt@allogistik.com?subject=${data.subject}&body=${data.message}`;
       // Show success toast
       toast({
         title: "Message sent successfully!",
@@ -100,7 +102,12 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="rounded-lg border border-cobalt bg-white p-6 text-cobalt dark:bg-gray-950">
+    <motion.div
+      variants={ANIMATE_DOWN}
+      animate="visible"
+      initial="hidden"
+      className="rounded-lg border border-cobalt bg-white p-6 text-cobalt dark:bg-gray-950"
+    >
       <h2 className="mb-6 text-2xl font-bold text-cobalt">Send Us a Message</h2>
 
       <Form {...form}>
@@ -209,6 +216,6 @@ export default function ContactForm() {
           </Button>
         </form>
       </Form>
-    </div>
+    </motion.div>
   );
 }

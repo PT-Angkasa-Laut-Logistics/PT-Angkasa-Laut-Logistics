@@ -1,5 +1,10 @@
 "use client";
 
+import {
+  ANIMATE_DOWN,
+  ANIMATE_UP,
+  CONTAINER_ANIMATION,
+} from "@/lib/animation-config";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -36,19 +41,25 @@ export default function ContactHero() {
       <div className="absolute -bottom-20 right-1/4 h-80 w-80 rounded-full bg-blue-400 opacity-20 blur-3xl" />
 
       <div className="container relative z-10 mx-auto px-4">
-        <div className="mx-auto max-w-5xl space-y-4 text-center">
-          <h2 className="mx-auto w-fit rounded-full bg-slate-100 px-4 py-2 font-semibold text-cobalt">
+        <motion.div
+          variants={CONTAINER_ANIMATION}
+          initial="hidden"
+          animate="visible"
+          className="mx-auto max-w-5xl space-y-4 text-center"
+        >
+          <motion.h2
+            variants={ANIMATE_UP}
+            className="mx-auto w-fit rounded-full bg-slate-100 px-4 py-2 font-semibold text-cobalt"
+          >
             Let&apos;s Connect
-          </h2>
+          </motion.h2>
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            variants={ANIMATE_UP}
             className="mb-6 font-sans text-4xl font-medium tracking-tight text-white dark:text-gray-200 sm:text-5xl md:text-6xl"
           >
             Start Your Logistics Journey
           </motion.h1>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
