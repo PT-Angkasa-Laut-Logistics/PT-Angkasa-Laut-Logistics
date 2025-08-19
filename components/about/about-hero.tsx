@@ -38,6 +38,9 @@ export default function AboutHero() {
 
       <div className="container relative z-10 mx-auto flex items-center justify-center gap-x-16 lg:gap-x-96">
         <div className="max-w-md">
+          <div className="mb-4 inline-block rounded-full bg-blue-200 px-4 py-2 text-sm font-bold text-blue-900 backdrop-blur-sm">
+            About Us
+          </div>
           <h1 className="mb-4 whitespace-nowrap text-5xl font-bold text-white dark:text-gray-200">
             Angkasa Laut Logistics
           </h1>
