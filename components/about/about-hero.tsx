@@ -12,56 +12,50 @@ export default function AboutHero() {
 
   if (!mounted) {
     return (
-      <section className="relative bg-white pb-24 pt-40">
-        <div className="container relative z-10 mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              About Us
-            </h1>
-            <p className="mx-auto mb-10 max-w-2xl text-xl text-blue-100">
-              Learn about our story, mission, and commitment to advancing
-              laboratory science.
-            </p>
-          </div>
+      <section className="relative flex h-[90vh] items-center justify-center">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/bg-about.png"
+            alt="Laboratory equipment"
+            fill
+            className="object-cover"
+          />
         </div>
       </section>
     );
   }
 
   return (
-    <section className="relative overflow-hidden bg-white pb-24 pt-40 dark:bg-slate-900 dark:text-white">
-      <div className="absolute inset-0 opacity-30">
-        {/* <div className="bg-grid-white/[0.2] absolute inset-0" /> */}
+    <section className="relative flex h-[90vh] items-center justify-center">
+      <div className="absolute inset-0">
         <Image
-          src="/images/about-header.jpg"
+          src="/images/bg-about.png"
           alt="Laboratory equipment"
           fill
           className="object-cover"
         />
       </div>
-      {/* Abstract background shapes */}
-      <div className="absolute -left-20 -top-24 h-80 w-80 rounded-full bg-blue-500 opacity-20 blur-3xl" />
-      <div className="absolute right-10 top-1/3 h-60 w-60 rounded-full bg-blue-400 opacity-20 blur-3xl" />
 
-      <div className="container relative z-10 mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6 text-4xl font-bold tracking-tight text-cobalt dark:text-gray-200 sm:text-5xl md:text-6xl"
-          >
-            About Us
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto mb-10 max-w-2xl text-xl text-cobalt dark:text-gray-200"
-          >
-            Learn about our story, mission, and commitment to advancing
-            laboratory science.
-          </motion.p>
+      <div className="container relative z-10 mx-auto flex items-center justify-center gap-x-16 lg:gap-x-96">
+        <div className="max-w-md">
+          <p className="mb-6 text-lg text-white dark:text-gray-200">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            iste aperiam nulla explicabo expedita commodi at corrupti, fuga
+            maxime ullam officiis molestias provident facere, debitis nesciunt
+            nam aliquam laudantium pariatur itaque accusantium nobis magnam
+            tenetur. Non aut cum deleniti minima fuga optio nam deserunt minus
+            velit sed iusto, hic dolor.
+          </p>
+        </div>
+
+        <div className="h-auto">
+          <Image
+            src="/images/al-full-logo.png"
+            alt="Logo Perusahaan"
+            width={350}
+            height={350}
+            objectFit="contain"
+          />
         </div>
       </div>
     </section>
